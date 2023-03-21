@@ -1,25 +1,42 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
+import ThemeSwitcher from './ThemeSwitcher.vue'
+import { SITE_TITLE } from '../consts'
+
+const navItems = [
+  { title: 'About', href: '/about' },
+  { title: 'Projects', href: '/projects' },
+  { title: 'Publications', href: '/publications' },
+  { title: 'Bookmarks', href: '/bookmarks' }
+]
 ---
 
-<header>
-	<h2>
-		{SITE_TITLE}
-	</h2>
-	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
-		<HeaderLink href="/about">About</HeaderLink>
-		<HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">Twitter</HeaderLink>
-		<HeaderLink href="https://github.com/withastro/astro" target="_blank">GitHub</HeaderLink>
-	</nav>
+<header class='p-4 border-b border-black dark:border-gray-700'>
+  <div
+    class='container mx-auto flex flex-col sm:flex-row items-center justify-between'
+  >
+    <h1 class='text-4xl font-bold mb-4 sm:mb-0'>
+      <a
+        href='/'
+        class='text-black hover:text-gray-700 dark:text-white dark:hover:text-gray-300'
+        >{SITE_TITLE}</a
+      >
+    </h1>
+    <nav
+      class='flex flex-col items-center sm:flex-row sm:items-center space-y-2 sm:space-y-0 space-x-0 sm:space-x-4'
+    >
+      {
+        navItems.map((item) => (
+          <a
+            href={item.href}
+            class='text-black hover:text-gray-700 dark:text-white dark:hover:text-gray-300'
+          >
+            {item.title}
+          </a>
+        ))
+      }
+      <div class='ml-0 sm:ml-4'>
+        <ThemeSwitcher client:load />
+      </div>
+    </nav>
+  </div>
 </header>
-<style>
-	header {
-		margin: 0em 0 2em;
-	}
-	h2 {
-		margin: 0.5em 0;
-	}
-</style>
