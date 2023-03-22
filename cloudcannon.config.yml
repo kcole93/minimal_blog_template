@@ -4,7 +4,12 @@
 # Collections are related sets of content files, typically grouped by folder.
 # Here you can define your collections, as well as any
 # CloudCannon configuration specific to those collections.
-
+collections_config:
+  posts:
+    path: content/blog
+    output: true
+    url: ''
+    icon: event_available
 
 # Control which collections are displayed in the CloudCannon site navigation,
 # and how those collections are grouped.
@@ -12,8 +17,7 @@ collection_groups:
   - heading: Blogging
     collections:
       - posts
-      - drafts
-
+      
 # Control which data sets are available to populate select and multiselect inputs.
 data_config:
 
