@@ -1,0 +1,80 @@
+{
+	"_inputs": {
+		"title": {
+			"type": "text",
+			"comment": "The title of your page."
+		}
+	},
+	"_select_data": {
+		"colors": [
+			"Red",
+			"Green",
+			"Blue"
+		]
+	},
+	"source": "src",
+	"output": "output",
+	"collections_config": {
+		"posts": {
+			"path": "content/blog",
+			"parser": "front-matter",
+			"output": true
+		}
+	},
+	"time": "2023-03-22T19:33:49.289Z",
+	"cloudcannon": {
+		"name": "cloudcannon-reader",
+		"version": "1.1.2"
+	},
+	"version": "0.0.3",
+	"data": {},
+	"collections": {
+		"posts": [
+			{
+				"title": "First post",
+				"description": "Lorem ipsum dolor sit amet",
+				"pubDate": "Jul 08 2022",
+				"heroImage": "/placeholder-hero.jpg",
+				"path": "content/blog/first-post.md",
+				"collection": "posts",
+				"url": ""
+			},
+			{
+				"title": "Markdown Style Guide",
+				"description": "Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.",
+				"pubDate": "Jul 01 2022",
+				"heroImage": "/placeholder-hero.jpg",
+				"path": "content/blog/markdown-style-guide.md",
+				"collection": "posts",
+				"url": ""
+			},
+			{
+				"title": "Second post",
+				"description": "Lorem ipsum dolor sit amet",
+				"pubDate": "Jul 22 2022",
+				"heroImage": "/placeholder-hero.jpg",
+				"path": "content/blog/second-post.md",
+				"collection": "posts",
+				"url": ""
+			},
+			{
+				"title": "Third post",
+				"description": "Lorem ipsum dolor sit amet",
+				"pubDate": "Jul 15 2022",
+				"heroImage": "/placeholder-hero.jpg",
+				"path": "content/blog/third-post.md",
+				"collection": "posts",
+				"url": ""
+			},
+			{
+				"title": "Using MDX",
+				"description": "Lorem ipsum dolor sit amet",
+				"pubDate": "Jul 02 2022",
+				"heroImage": "/placeholder-hero.jpg",
+				"path": "content/blog/using-mdx.mdx",
+				"collection": "posts",
+				"url": ""
+			}
+		]
+	}
+}
