@@ -9,12 +9,12 @@
 # Control which collections are displayed in the CloudCannon site navigation,
 # and how those collections are grouped.
 collection_groups:
-{
+[
   blog: {
     path: 'content/blog'
     
   }
-}
+]
 
 # Control which data sets are available to populate select and multiselect inputs.
 data_config:
